@@ -1,0 +1,135 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color:#333;
+    --text-color_2:#666
+    --border-color:#dbdbdb;
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --search-select: 125px;
+    --search-button:60px;
+    --backround-color:#f5f5f5;
+    --star-color:#fcd536;
+}
+*{
+    box-sizing: inherit;        /*kế thừa box-sizing: boder-bõ*/
+}
+
+html{
+    /* 10px */
+    /* 1rem  = 10px */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;         /* = boder+padding */
+}
+body{
+    background-color: var(--backround-color);
+}
+
+/* responsive */
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid_full-width {
+    width: 100%;
+}
+.grid_row{          /*item trên 1 dòng*/
+    display: flex;          
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.grid_800{
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid_column-2{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+.grid_column-10{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+.grid_column-2-4{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+/* animation */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeScale{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+
+    }
+}
+.btn{
+    min-width: 124px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 5px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5rem;
+}
+
+/* pagination---------------- */
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.pagination-item{
+    margin:  0 12px ;
+}
+.pagination-item_active a{
+    background-color: red;
+    color: var(--white-color);
+}
+.pagination-link{
+    display: block;
+    --height:30px
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    text-align: center;
+    line-height: var(--height);
+    border-radius: 2px;
+}
+.pagination-link:hover{
+    text-decoration: none;
+    color: #939393;
+
+}
