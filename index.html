@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Anonymous</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +15,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -137,6 +137,7 @@
 
                     </ul>
                 </nav>
+
                 <!-- end header-nav -->
 
                 <!-- start header search  -->
@@ -145,6 +146,7 @@
                         <label class="header_mobie_bars" for="mobile_bars_checkbox"><i class="header_mobie_bars-icon fas fa-bars"></i></label>
                         <label class="header_mobie_search" for="mobile_search_checkbox"><i class="header_mobile_search-icon fas fa-search"></i></label>
                     </div>
+                    
                     <div class="header__logo hide-on-tablet">
                         <svg viewBox="0 0 192 65" class="header_logo--img">
                             <g fill-rule="evenodd">
@@ -155,6 +157,31 @@
                         </svg>
                     </div>
                     <input type="checkbox" hidden class="header_search_checkbox" id="mobile_search_checkbox">
+                    <input type="checkbox" hidden class="header_bars_checkbox" id="mobile_bars_checkbox">
+                    <label for="mobile_bars_checkbox" class="navbar_overlay"></label>     
+                    <!-- navbar_for_mobile -->
+                    <div class="navbar_for_mobile">
+                        <div class="navbar_mobile_header">
+                            <a class="navbar_mobile_header-item" href="#">
+                                <img src="./assets/img/account.png" alt="photos">
+                                <h3>Anonymous</h3>
+                            </a>
+                            <label for="mobile_bars_checkbox"><i class="fas fa-times"></i></label>
+                        </div>
+                        <ul class="navbar_mobile_list">
+                            <li class="navbar_mobile_item">
+                                <a href="#" class="navbar_mobile_link"><i class="fas fa-mobile-alt"></i> Mỹ phẩm</a>
+                            </li>
+                            <li class="navbar_mobile_item">
+                                <a href="#" class="navbar_mobile_link"><i class="fas fa-mobile-alt"></i> Điện thoại</a>
+                            </li>
+                            <li class="navbar_mobile_item">
+                                <a href="#" class="navbar_mobile_link"><i class="fas fa-laptop"></i> Laptop</a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <!-- end navbar for mobile -->
                     <div class="header_search">
                         <input type="text" class="header_search--input" placeholder="Tìm kiếm sản phẩm">
                         <div class="header_search_select">
@@ -264,7 +291,7 @@
                                 </div>
                                 <a class="header_cart-product-button" href="#">Xem giỏ hàng</a>
 
-                            </div>
+                            </div> 
                             <span class="number_cart">
                                 1
                             </span>
@@ -273,6 +300,7 @@
                     </div>
                 </div>
                 <!-- end header - search  -->
+                
             </div>
             <ul class="header_sort-bar">
                 <li class="header_sort-item">
@@ -302,13 +330,14 @@
                 </li>
 
             </ul>
+
         </header>
         <!-- end header -->
         <!-- start-container -->
         <div class="container-fluid app-container">
             <div class="grid wide">
-                <div class="grid_row">
-                    <div class="grid_column-2">
+                <div class="row sm-gutter">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="category">
                             <h3 class="category_heading">
                                 <i class="fas fa-list"></i>
@@ -339,7 +368,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="grid_column-10">
+                    <div class="col l-10 m-12 c-12">
                         <!-- start filter -->
                         <div class="filter hide-on-mobile-table">
                             <div class="home_filter">
@@ -379,8 +408,8 @@
                         <!-- end fillter -->
                         <!-- start product -->
                         <div class="home_product">
-                            <div class="grid_row">
-                                <div class="grid_column-2-4">
+                            <div class="row sm-gutter">
+                                <div class="col l-2-4 m-4 c-6">
                                     <!-- product-item -->
                                     <a href="#"  class="home-product-item">
                                         <img class="product-item_img"
@@ -426,7 +455,7 @@
                                         </span>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <!-- product-item -->
                                     <a href="#"  class="home-product-item">
                                         <img class="product-item_img"
@@ -472,7 +501,7 @@
                                         </span>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <!-- product-item -->
                                     <a href="#"  class="home-product-item">
                                         <img class="product-item_img"
@@ -518,7 +547,7 @@
                                         </span>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <!-- product-item -->
                                     <a href="#"  class="home-product-item">
                                         <img class="product-item_img"
@@ -564,7 +593,7 @@
                                         </span>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <!-- product-item -->
                                     <a href="#"  class="home-product-item">
                                         <img class="product-item_img"
@@ -611,8 +640,8 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="grid_row">
-                                <div class="grid_column-2-4">
+                            <div class="row sm-gutter">
+                                <div class="col l-2-4 m-4 c-6">
                                     <!-- product-item -->
                                     <a href="#"  class="home-product-item">
                                         <img class="product-item_img"
@@ -658,7 +687,7 @@
                                         </span>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <!-- product-item -->
                                     <a href="#"  class="home-product-item">
                                         <img class="product-item_img"
@@ -704,7 +733,7 @@
                                         </span>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <!-- product-item -->
                                     <a href="#"  class="home-product-item">
                                         <img class="product-item_img"
@@ -750,7 +779,7 @@
                                         </span>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <!-- product-item -->
                                     <a href="#"  class="home-product-item">
                                         <img class="product-item_img"
@@ -796,7 +825,7 @@
                                         </span>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <!-- product-item -->
                                     <a href="#"  class="home-product-item">
                                         <img class="product-item_img"
@@ -891,8 +920,8 @@
             <div class="footer_distance_onTop">
             </div>
             <div class="grid wide">
-                <div class="grid_row footer_lisbetween">
-                    <div class="grid_column-2-4">
+                <div class="row footer_lisbetween">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                         <ul class="footer_list">
                             <li class="footer_list-item">
@@ -912,7 +941,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid_column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Giới thiệu</h3>
                         <ul class="footer_list">
                             <li class="footer_list-item">
@@ -932,7 +961,7 @@
                             </li>
                         </ul>   
                     </div>
-                    <div class="grid_column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Danh mục</h3>
                         <ul class="footer_list">
                             <li class="footer_list-item">
@@ -949,7 +978,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid_column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Theo dõi chúng tôi</h3>
                         <ul class="footer_list">
                             <li class="footer_list-item">
@@ -960,7 +989,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid_column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
                         <div class="footer_app">
                             <img class="foot_link_imgQr" src="./assets/img/QaCode.png" alt="QRcode">
@@ -979,7 +1008,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid_row footer_bottom">
+                <div class="row footer_bottom">
                     <span class="footer_bottom-licence">
                         © 2021 Anonymous. Tất cả các quyền được bảo lưu.
                     </span>
@@ -1030,7 +1059,7 @@
                 </div>
             </div>
             <div class="footer_information">
-                <div class="grid_800">
+                <div class="grid wide">
                     <ul class="bottom-help">
                         <li class="bottom-help_item">
                             <a href="#" class="bottom-help_link">Chính sách bảo mật</a>
