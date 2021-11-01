@@ -128,7 +128,6 @@
     border-top: 1px solid #bfbbbb;
     box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
     display: none;
-    overflow-x: scroll;
 }
 .header_sort-item{
     flex: 1;
@@ -184,7 +183,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: 320px;
+    width: 70%;
     max-width: 100%;
     background-color: var(--white-color);
     box-shadow: 0 0 1px 2px rgb(0 0 0 / 20%);
@@ -211,7 +210,7 @@
     display: flex;
     text-decoration: none;
     align-items: center;
-    
+    -webkit-tap-highlight-color: transparent;
 }
 .navbar_mobile_header-item:hover{
     text-decoration: none;
@@ -511,6 +510,7 @@
     color: var(--white-color);
     position: relative;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 .number_cart{
     background-color: white;
@@ -712,6 +712,9 @@
 .container-fluid{
     padding-top: 12px;
 }
+.container-fluid::-webkit-scrollbar{
+    display: none;
+}
 .category{
     background-color: var(--white-color);
     border-radius: 2px;
@@ -741,6 +744,7 @@
     transition: right linear 0.1s;
     right:0;
     font-weight: 500;
+    padding: 0 6px;
 }
 .category-item_active .category-item_link{
     color: #f08570;
@@ -760,6 +764,54 @@
     text-decoration: none;
     right: -4px;
 }
+/* Mobile_product */
+.mobile_category{
+    display: none;
+}
+
+.mobile_category_list{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    overflow-x: auto;
+}
+.mobile_category_list::-webkit-scrollbar{
+    display: none;
+}
+.mobile_category-item{
+    flex-shrink:0 ;
+    margin-right: 10px;
+}
+.mobile_category-item:nth-last-of-type(3n+1) .mobile_category_link{
+    background-color: #87AFD8;
+}
+.mobile_category-item:nth-last-of-type(3n+2) .mobile_category_link{
+    background-color: #76C9BD}
+.mobile_category-item:nth-last-of-type(3n+3) .mobile_category_link{
+    background-color: #88CF81;
+}
+.mobile_category_link{
+    --line-height: 2rem;
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    display: block;
+    line-height: var(--line-height);
+    height: calc(var(--line-height) * 2);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    min-width: 110px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: 300;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
 /* home sort + filter */
 .filter{
     display: flex;
