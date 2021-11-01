@@ -109,6 +109,52 @@
     color: var(--text-color);
     text-decoration: none;
 }
+
+/* header_sort bar---------- */
+.header_sort-bar{
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    height: var(--header_sort-bar-height);
+    background-color: var(--white-color);
+    list-style: none;
+    margin: -10px 0px 0px 0px;
+    padding-left: 0;
+    border-top: 1px solid #bfbbbb;
+    box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
+    display: none;
+    overflow-x: scroll;
+}
+.header_sort-item{
+    flex: 1;
+}
+.header_sort-item-active .header_sort-link{
+    color: var(--primary-color);
+}
+.header_sort-link{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    display: block;
+    height: 100%;
+    line-height: var(--header_sort-bar-height);
+    text-align: center;
+    position: relative;
+}
+.header_sort-link:hover{
+    text-decoration: none;
+}
+.header_sort-link::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 0;
+    height: 60%;
+    border-left: 1px solid #e5e5ee;
+    transform: translateY(-50%);
+}
+
+
 /* #---------------Header_QR_code------------ */
 .header_navbar_Qr{
     width: 186px;
@@ -272,6 +318,17 @@
     align-items: center;
     margin: 0 0 8px 8px;
 }
+.header_mobie_bars-icon,.header_mobile_search-icon{
+    font-size: 2.6rem;
+    color: var(--white-color);
+}
+.header_mobie_bars{
+
+}
+.header_mobie_search{
+    padding: 0 12px;
+    display: none;
+}
 .header__logo{
     width: 200px;
 }
@@ -316,6 +373,7 @@
     background-color: white;
     z-index: 1;
     border-bottom-left-radius: 2px;
+    box-shadow: 0 0 1px 2px rgb(0 0 0 / 20%);
     border-bottom-right-radius: 2px;
     border: 1px solid var(--border-color);
     display: none;
@@ -361,7 +419,7 @@
 }
 .number_cart{
     background-color: white;
-    color: red;
+    color: var(--primary-color);
     position: absolute;
     padding: 1px 6px;
     font-size: 1.2rem;
@@ -397,6 +455,7 @@
     top: 46px;
     border: 1px solid var(--border-color);
     display: none;
+    box-shadow: 0 0 2px 1px rgb(0 0 0 / 30%) ;
     animation: fadeIn ease .5s;
     z-index: 1;
 }
@@ -437,6 +496,7 @@
     display: none;
     animation: fadeScale ease 0.3s ;
     transform-origin: 90% top;
+    box-shadow: 0 0 1px 2px rgb(0 0 0 / 20%);
     z-index: 1;
     cursor: default;
     
@@ -482,7 +542,7 @@
 }
 /* header cart product----------- */
 .header_cart-product{
-    height: 56vh;
+    max-height: 56vh;
     overflow-y:scroll;
 }
 .header_cart-product-title{
@@ -492,6 +552,8 @@
     display: block;
     height: 20px;
     margin-top: 10px;
+    text-align: left;
+    margin-left: 12px;
 }
 .header_cart-product-link{
     display: flex;
@@ -524,14 +586,14 @@
 .header_cart-product-price{
     font: 1em sans-serif;
     font-size: 1.4rem;
-    color: red;
+    color: var(--primary-color);
     text-decoration: none;
 }
 .header_cart-product-button{
     font: 1em sans-serif;
     font-size: 1.4rem;
     text-decoration: none;
-    background-color: red;
+    background-color: var(--primary-color);
     color: white;
     display: block;
     width: 120px;
@@ -716,7 +778,7 @@
     padding: 8px 10px;
 }
 .select-input_option button:hover{
-    color: red;
+    color: var(--primary-color);
 }
 
 /* home product---------------------------------------- */
@@ -749,7 +811,7 @@
     position: absolute;
     top: 10px;
     left: -4;
-    background-color: red;
+    background-color: var(--primary-color);
     font-size: 1.2rem;
     font-weight: 500;
     line-height: 1.6rem;
@@ -786,7 +848,7 @@
     padding: 4px 0 0 4px;
 }
 .product-item-precent_sale span{
-    color: red;
+    color: var(--primary-color);
     font-weight: 500;
     font-size: 1.3rem;
     line-height: 1.0rem;
@@ -847,7 +909,7 @@
 }
 .item-price_sale{
     margin-left: 10px;
-    color: red;
+    color: var(--primary-color);
     font-weight: 500;
 }
 .product-item_review{
@@ -863,7 +925,7 @@
     color: rgb(125, 123, 123);
 }
 .item_review-liked{
-    color: red;
+    color: var(--primary-color);
 }
 .item_review-right{
     display: flex;
@@ -944,7 +1006,7 @@
 }    
 .footer_list-link:hover{
     text-decoration: none;
-    color: red;
+    color: var(--primary-color);
 }
 .footer_list-link i {
     font-size: 1.4rem;

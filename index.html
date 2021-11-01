@@ -26,7 +26,9 @@
     <link rel="stylesheet" href="./vendors/themify/themify-icons.css">
 
     <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./vendors/css/grid.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 
 </head>
 
@@ -34,9 +36,9 @@
     <div class="main">
         <!-- start header -->
         <header class="header">
-            <div class="grid">
+            <div class="grid wide">
                 <!-- start header-nav -->
-                <nav class="header_navbar">
+                <nav class="header_navbar hide-on-mobile-table">
                     <ul class="header_navbar_left">
                         <li class="header_navbar_left_item header_navbar_left_item--qr header_navbar_left_item--hover">
                             Tải ứng dựng Anonymous-shop
@@ -139,7 +141,11 @@
 
                 <!-- start header search  -->
                 <div class="header-with-search">
-                    <div class="header__logo">
+                    <div class="header_sort_group">
+                        <label class="header_mobie_bars" for="mobile_bars_checkbox"><i class="header_mobie_bars-icon fas fa-bars"></i></label>
+                        <label class="header_mobie_search" for="mobile_search_checkbox"><i class="header_mobile_search-icon fas fa-search"></i></label>
+                    </div>
+                    <div class="header__logo hide-on-tablet">
                         <svg viewBox="0 0 192 65" class="header_logo--img">
                             <g fill-rule="evenodd">
                                 <path fill="#fff"
@@ -148,6 +154,7 @@
                             </g>
                         </svg>
                     </div>
+                    <input type="checkbox" hidden class="header_search_checkbox" id="mobile_search_checkbox">
                     <div class="header_search">
                         <input type="text" class="header_search--input" placeholder="Tìm kiếm sản phẩm">
                         <div class="header_search_select">
@@ -267,11 +274,39 @@
                 </div>
                 <!-- end header - search  -->
             </div>
+            <ul class="header_sort-bar">
+                <li class="header_sort-item">
+                    <a href="#" class="header_sort-link">
+                        Liên quan
+                    </a>
+                </li>
+                <li class="header_sort-item header_sort-item-active">
+                    <a href="#" class="header_sort-link">
+                        Mới nhất
+                    </a>
+                </li>
+                <li class="header_sort-item">
+                    <a href="#" class="header_sort-link">
+                        Bán chạy
+                    </a>
+                </li>
+                <li class="header_sort-item">
+                    <a href="#" class="header_sort-link">
+                        Giá
+                    </a>
+                </li>
+                <li class="header_sort-item">
+                    <a href="#" class="header_sort-link">
+                        Xem thêm
+                    </a>
+                </li>
+
+            </ul>
         </header>
         <!-- end header -->
         <!-- start-container -->
-        <div class="container-fluid">
-            <div class="grid">
+        <div class="container-fluid app-container">
+            <div class="grid wide">
                 <div class="grid_row">
                     <div class="grid_column-2">
                         <nav class="category">
@@ -306,7 +341,7 @@
                     </div>
                     <div class="grid_column-10">
                         <!-- start filter -->
-                        <div class="filter">
+                        <div class="filter hide-on-mobile-table">
                             <div class="home_filter">
                                 <span class="home-filter_label">
                                     Sắp xếp theo
@@ -855,7 +890,7 @@
         <footer class="footer">
             <div class="footer_distance_onTop">
             </div>
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid_row footer_lisbetween">
                     <div class="grid_column-2-4">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
@@ -1011,7 +1046,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="grid">
+                <div class="grid wide">
                     <span class="bottom-information">Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc Khánh, Quận Ba Đình, Thành phố Hà Nội, Việt Nam. Tổng đài hỗ trợ: 19001221 - Email: cskh@hotro.shopee.vn
                         <br> Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Đức Trí - Điện thoại liên hệ: 024 73081221 (ext 4678)
                         <br> Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015
